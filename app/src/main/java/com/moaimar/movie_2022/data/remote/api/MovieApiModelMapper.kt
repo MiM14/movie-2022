@@ -1,4 +1,4 @@
-package com.moaimar.movie_2022.data.remote
+package com.moaimar.movie_2022.data.remote.api
 
 import com.moaimar.movie_2022.domain.Movie
 

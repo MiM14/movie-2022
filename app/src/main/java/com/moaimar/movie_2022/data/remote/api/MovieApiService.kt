@@ -1,11 +1,11 @@
-package com.moaimar.movie_2022.data.remote
+package com.moaimar.movie_2022.data.remote.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MovieApiService {
 
-    private val url = "https://movies-and-shows-api.cyclic.app/movies"
+    private val url = "https://movies-and-shows-api.cyclic.app/"
     private var apiEndPoints: MovieApiEndPoints
 
     init {
@@ -18,7 +18,7 @@ class MovieApiService {
             .build();
     }
 
-    private fun buildApiEndPoint():MovieApiEndPoints{
+    private fun buildApiEndPoint(): MovieApiEndPoints {
         return buildClient().create(MovieApiEndPoints::class.java)
     }
 
