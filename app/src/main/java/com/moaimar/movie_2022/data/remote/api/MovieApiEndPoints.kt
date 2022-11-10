@@ -8,6 +8,6 @@ interface MovieApiEndPoints{
     @GET("movies")
     fun getAll(): Call<List<MovieApiModel>>
 
-    @GET("movies/{MovieId}")
-    fun findById(@Path("MovieId") id:String): Call<MovieApiModel>
+    @GET("movies/{movieId}")
+    fun findById(@Path("movieId") id:String): Call<MovieApiModel>
 }
