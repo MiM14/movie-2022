@@ -12,5 +12,6 @@ data class MovieEntity(
         @ColumnInfo(name = "plot") val plot: String,
         @ColumnInfo(name = "genre") val genre: String,
         @ColumnInfo(name = "rating") val rating: String,
+        @ColumnInfo(name = "year") val year: String,
         @ColumnInfo(name = "poster") val poster: String
     )
