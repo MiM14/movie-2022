@@ -24,7 +24,7 @@ class MovieLocalXmlDataSource(private val sharedPref: SharedPreferences,private 
     }
 
     override fun getMovieDetail(movieId: String)=
-        sharedPref.getString(movieId, "null")?.let {
+        sharedPref.getString(movieId, null)?.let {
             kSerializer.fromJson(it, Movie::class.java)
     }
 }
