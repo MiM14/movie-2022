@@ -2,7 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph">
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/movie_feed">
 
     <fragment
         android:id="@+id/movie_feed"
@@ -10,7 +11,7 @@
         tools:layout="@layout/fragment_movie_feed">
         <action
             android:id="@+id/action_movie_feed_to_movie_detail"
-            app:destination="@id/movie_detail"/>
+            app:destination="@+id/movie_detail"/>
     </fragment>
 
     <fragment

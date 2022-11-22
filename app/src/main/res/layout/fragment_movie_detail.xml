@@ -21,36 +21,71 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/title_size"
         android:textStyle="bold"
-        tools:text="Título de la película"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_image"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_image"
+        tools:text="Título de la película"
+        android:layout_margin="@dimen/margin"/>
 
+    <TextView
+        android:id="@+id/date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:text="@string/release_date"
+        android:layout_marginTop="@dimen/horizontal_spacing"/>
     <TextView
         android:id="@+id/year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/title"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        tools:text="2009"
-        android:layout_marginLeft="@dimen/horizontal_spacing"/>
+        android:layout_marginStart="@dimen/margin"
+        app:layout_constraintStart_toEndOf="@id/date_label"
+        app:layout_constraintTop_toTopOf="@id/date_label"
+        tools:text="2009"/>
 
+    <TextView
+        android:id="@+id/genre_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_label"
+        android:text="@string/genre_label"
+        android:layout_marginTop="@dimen/horizontal_spacing"/>
     <TextView
         android:id="@+id/genre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/year"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        tools:text="Genre"
-        android:layout_marginLeft="@dimen/horizontal_spacing"/>
+        android:layout_marginStart="@dimen/margin"
+        app:layout_constraintStart_toEndOf="@id/genre_label"
+        app:layout_constraintTop_toTopOf="@id/genre_label"
+        tools:text="Genre" />
 
-    <TextView
-        android:id="@+id/rating"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_image"
-        tools:text="9.9" />
+        app:layout_constraintEnd_toEndOf="@id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white_50"
+        android:layout_margin="@dimen/margin"
+        >
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="9.9"
+            android:textColor="@color/black"/>
+        <ImageView
+            app:layout_constraintStart_toEndOf="@id/rating"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/star_size"
+            android:layout_height="@dimen/star_size"
+            android:src="@drawable/ic_fill_star"
+            app:tint="@color/yellow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/plot"
@@ -58,11 +93,10 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:maxLines="3"
-        app:layout_constraintTop_toBottomOf="@id/year"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="@tools:sample/lorem/random" />
-
-
+        app:layout_constraintTop_toBottomOf="@id/genre_label"
+        tools:text="@tools:sample/lorem/random"
+        android:layout_margin="@dimen/margin"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
