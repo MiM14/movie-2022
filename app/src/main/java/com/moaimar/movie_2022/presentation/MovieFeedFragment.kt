@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.moaimar.movie_2022.databinding.FragmentMovieFeedBinding
 
-
 class MovieFeedFragment: Fragment() {
     private var binding: FragmentMovieFeedBinding? = null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

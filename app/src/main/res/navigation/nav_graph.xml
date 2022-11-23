@@ -17,5 +17,10 @@
     <fragment
         android:id="@+id/movie_detail"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_movie_detail"/>
+        tools:layout="@layout/fragment_movie_detail">
+        <argument
+            android:name="movieId"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
 </navigation>
