@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="vertical_spacing">16dp</dimen>
+    <dimen name="horizontal_spacing">10dp</dimen>
+    <dimen name="margin">5dp</dimen>
+    <dimen name="title_size">18sp</dimen>
+    <dimen name="image_size">120dp</dimen>
+    <dimen name="detail_image_size">180dp</dimen>
+    <dimen name="star_size">18dp</dimen>
+    <dimen name="zero_size">0dp</dimen>
+</resources>
