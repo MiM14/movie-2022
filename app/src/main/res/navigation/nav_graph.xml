@@ -5,8 +5,10 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/movie_feed">
 
+
     <fragment
         android:id="@+id/movie_feed"
+        android:name="com.moaimar.movie_2022.presentation.MovieFeedFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_movie_feed">
         <action
@@ -16,11 +18,11 @@
 
     <fragment
         android:id="@+id/movie_detail"
+        android:name="com.moaimar.movie_2022.presentation.MovieDetailFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_movie_detail">
         <argument
             android:name="movieId"
-            android:defaultValue=""
             app:argType="string" />
     </fragment>
 </navigation>
